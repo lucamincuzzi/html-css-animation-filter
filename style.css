@@ -126,6 +126,15 @@
     text-align: center;
     text-decoration: none;
 }
+
+.ex-12-button:hover .ex-12-top-white {
+    animation: border-forth 1.8s linear;
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: border-back 1.8s linear
+}
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
@@ -166,5 +175,33 @@
 
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes border-forth {
+    0% {
+        transform: translateX(0%)
+    }
+
+    50% {
+        transform: translateX(180%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes border-back {
+    0% {
+        transform: translateX(0%)
+    }
+
+    50% {
+        transform: translateX(-160%);
+    }
+
+    100% {
+        transform: translateX(0%);
     }
 }
