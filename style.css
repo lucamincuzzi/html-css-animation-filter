@@ -102,11 +102,17 @@
 }
 
 .ex-10-icon {
+    animation: counterclockwise-rotation 1s infinite linear;
     font-size: 60px;
 }
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation: spring-loaded 2s linear;
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -138,3 +144,27 @@
 }
 
 /* ANIMATIONS */
+
+@keyframes counterclockwise-rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes spring-loaded {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    90% {
+        transform: rotate(320deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
